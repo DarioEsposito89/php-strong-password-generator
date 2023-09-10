@@ -1,3 +1,12 @@
+<?php
+
+$passLength = isset($_GET['passLength']) ? intval($_GET['passLength']) : null;
+
+require_once __DIR__ . "/./functions.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
