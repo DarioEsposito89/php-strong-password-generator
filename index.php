@@ -7,6 +7,7 @@ require_once __DIR__ . "/./functions.php";
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +28,21 @@ require_once __DIR__ . "/./functions.php";
     </div>
 
     <div class="container w-50 p-3 rounded mb-3" style="background-color: rgb(0, 50, 105); color: rgb(82, 141, 169);">
-        <p class="m-0"></p>
+        <p class="m-0">
+            <?php
+
+            if (isset($_GET['passLength'])) {
+                echo generatePasswordSimple($passLength);
+            } else {
+            ?>
+                Nessuna password generata
+            <?php
+            }
+
+            ?>
+        </p>
     </div>
 
-    
     <div class="container w-50 p-3 rounded" style="background-color: white">
         <form action="" method="get">
             <div class="row">
@@ -52,4 +64,3 @@ require_once __DIR__ . "/./functions.php";
 </body>
 
 </html>
-
