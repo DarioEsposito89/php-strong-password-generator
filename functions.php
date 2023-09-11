@@ -4,6 +4,7 @@ $letters = 'abcdefghijklmnopqrstuvyxz';
 $symbols = '*/-=+?!^%&);{<>|.,:[}]';
 $numbers = '0123456789';
 
+// Funzione che genera la password
 function generatePassword($passLength, $letters, $symbols)
 {
     $password = '';
@@ -31,16 +32,19 @@ function generatePassword($passLength, $letters, $symbols)
         }
     }
 
+    // Mi ritorna la stringa della password mescolata
     return str_shuffle($password);
 }
 
+// Funzione che genera la password che appare nell'index
 function generatePasswordSimple($passLength)
 {
-
+    // Variabili di lettere, simboli e numeri
     $letters = 'abcdefghijklmnopqrstuvyxz';
     $symbols = '*/-=+?!^%&);{<>|.,:[}]';
     $numbers = '0123456789';
 
+    // Impostazione dei caratteri
     $chars = $letters;
     $chars .= strtoupper($letters);
     $chars .= $symbols;
